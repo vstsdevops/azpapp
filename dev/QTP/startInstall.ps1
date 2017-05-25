@@ -19,6 +19,6 @@ foreach ($item in $zip.items()) {
 
 
 # Install
-Start-Process "C:\temp\QTP 12 - HP UFT 12.54\setup.exe"
-Start-Process "C:\temp\qtptest.exe" 
+Start-Process "C:\temp\setup.exe"
+Start-Process "C:\temp\qtpsetup.exe"
 
