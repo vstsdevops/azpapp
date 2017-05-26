@@ -1,8 +1,8 @@
 $NewDIR = "C:\SoftwaresDump\QTP12.5"
 
-$SoftwareWebLOC = "http://ftp.mphasism4l.cloud/Artifacts/QTP12.5/QTP%2012%20-%20HP%20UFT%2012.54.zip"
+$SoftwareWebLink = "http://artifacts.g7crm4l.org/Artifacts/QTP12.5/QTP%2012%20-%20HP%20UFT%2012.54.zip"
 
-$AutoITEXEWebLoc = "http://ftp.mphasism4l.cloud/Artifacts/QTP12.5/qtpsetup.exe"
+$AutoITEXEWebLink = "http://artifacts.g7crm4l.org/Artifacts/QTP12.5/qtpsetup.exe"
 
 $SoftwarePath = "C:\SoftwaresDump\QTP12.5\QTP 12 - HP UFT 12.54.zip"
 
@@ -11,7 +11,7 @@ $SoftwarePath = "C:\SoftwaresDump\QTP12.5\QTP 12 - HP UFT 12.54.zip"
 New-Item "$NewDIR" -ItemType Directory -ErrorAction SilentlyContinue
 
 # Download
-(New-Object System.Net.WebClient).DownloadFile("$SoftwareWebLOC", "$SOftwarePath")
+(New-Object System.Net.WebClient).DownloadFile("$SoftwareWebLink", "$SoftwarePath")
 
 
 #Extracting
@@ -22,7 +22,7 @@ foreach ($item in $zip.items()) {
   $shell.Namespace("$NewDIR").CopyHere($item)
 }
 
-(New-Object System.Net.WebClient).DownloadFile("$AutoITEXEWebLoc", "$NewDIR")
+(New-Object System.Net.WebClient).DownloadFile("$AutoITEXEWebLink", "$NewDIR")
 
 # Install
 Start-Process "$NewDIR\setup.exe"
