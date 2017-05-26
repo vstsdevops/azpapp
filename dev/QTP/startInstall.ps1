@@ -1,5 +1,5 @@
 $NewDIR = "C:\SoftwaresDump\QTP12.5"
-$SoftwareWebLink = "http://artifacts.g7crm4l.org/Artifacts/QTP12.5/QTP%2012%20-%20HP%20UFT%2012.54.zip"
+$SoftwareWebLink = "http://artifacts.g7crm4l.org/softwares/QTP12.5/QTP%2012%20-%20HP%20UFT%2012.54.zip"
 $SoftwarePath = "C:\SoftwaresDump\QTP12.5\QTP 12 - HP UFT 12.54.zip"
 
 # Create temp directory
@@ -14,10 +14,10 @@ foreach ($item in $zip.items()) {
   $shell.Namespace("$NewDIR").CopyHere($item)
 }
 
-(New-Object System.Net.WebClient).DownloadFile("http://artifacts.g7crm4l.org/Artifacts/QTP12.5/qtpsetup.exe", "C:\SoftwaresDump\QTP12.5\qtpsetup.exe")
+(New-Object System.Net.WebClient).DownloadFile("http://artifacts.g7crm4l.org/softwares/QTP12.5/qtpsetup.exe", "C:\SoftwaresDump\QTP12.5\qtpsetup.exe")
 
 
 
 # Install
-Start-Process "C:\SoftwaresDump\QTP12.5\setup.exe"
-Start-Process "C:\SoftwaresDump\QTP12.5\qtpsetup.exe" 
+Start-Process "C:\SoftwaresDump\QTP12.5\setup.exe" -ArgumentList "/S /v""/qn""" -Wait
+Start-Process "C:\SoftwaresDump\QTP12.5\qtpsetup.exe" -ArgumentList "/S /v""/qn""" -Wait
