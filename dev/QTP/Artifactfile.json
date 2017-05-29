@@ -11,7 +11,7 @@
     "targetOsType": "Windows",
  
  "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./startInstall.ps1 -PackageList ', 'Unified Functional Testing'', '\"')]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./startInstall.ps1 -PackageList ', 'Unified Functional Testing', '\"')]"
     }
 }
     }
