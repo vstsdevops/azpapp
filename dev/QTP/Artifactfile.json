@@ -9,8 +9,10 @@
     ],
     "iconUri": "",
     "targetOsType": "Windows",
-    "runCommand": {
-        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startInstall.ps1"
-
+ 
+ "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./startInstall.ps1 -PackageList ', 'filezilla', '\"')]"
+    }
+}
     }
 }
